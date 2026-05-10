@@ -296,6 +296,7 @@ async def main_async():
     telegram_app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     async with telegram_app:
+        await asyncio.sleep(10)
         await telegram_app.start()
         await telegram_app.updater.start_polling()
         asyncio.create_task(proactive_loop())
