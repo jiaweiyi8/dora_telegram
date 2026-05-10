@@ -116,7 +116,7 @@ def save_chat_id(cid: int):
 
 def get_all_memories() -> str:
     try:
-        memories = mem0_client.get_all(user_id=USER_ID)
+        memories = mem0_client.get_all(filters={"user_id": USER_ID})
         if isinstance(memories, dict):
             memories = memories.get("results", [])
         if not memories:
