@@ -1,0 +1,4 @@
+anthropic
+python-telegram-bot
+mem0ai
+pytz
